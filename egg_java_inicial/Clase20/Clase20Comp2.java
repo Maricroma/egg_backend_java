@@ -26,7 +26,7 @@ public class Clase20Comp2 {
 
     private static Double calcularCirculo() {
         String calculo = mostrarSubmenu();
-        Double radio = pedirDouble("Ingrese el radio:");
+        Double radio = pedirDato("Ingrese el radio:");
         return switch (calculo) {
             case "1" -> Math.PI * Math.pow(radio, 2);
             case "2" -> 2 * Math.PI * radio;
@@ -38,8 +38,8 @@ public class Clase20Comp2 {
         String calculo = mostrarSubmenu();
         return switch (calculo) {
             case "1" -> {
-                Double base = pedirDouble("Ingrese la base:");
-                Double altura = pedirDouble("Ingrese la altura:");
+                Double base = pedirDato("Ingrese la base:");
+                Double altura = pedirDato("Ingrese la altura:");
                 yield (base * altura) / 2;
             }
             case "2" -> {
@@ -54,8 +54,8 @@ public class Clase20Comp2 {
         String calculo = mostrarSubmenu();
         return switch (calculo) {
             case "1" -> {
-                Double base = pedirDouble("Ingrese la base:");
-                Double altura = pedirDouble("Ingrese la altura:");
+                Double base = pedirDato("Ingrese la base:");
+                Double altura = pedirDato("Ingrese la altura:");
                 yield base * altura;
             }
             case "2" -> {
@@ -69,12 +69,12 @@ public class Clase20Comp2 {
     private static Double[] pedirLados(int cantidad) {
         Double[] lados = new Double[cantidad];
         for (int i = 0; i < cantidad; i++) {
-            lados[i] = pedirDouble("Ingrese la longitud del lado " + (i + 1) + ":");
+            lados[i] = pedirDato("Ingrese la longitud del lado " + (i + 1) + ":");
         }
         return lados;
     }
 
-    private static Double pedirDouble(String mensaje) {
+    private static Double pedirDato(String mensaje) {
         System.out.println(mensaje);
         while (!sc.hasNextDouble()) {
             System.out.println("Entrada inválida. Intente nuevamente:");
