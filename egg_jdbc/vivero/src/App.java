@@ -28,7 +28,7 @@ public class App {
         String host = "127.0.0.1"; // localhost
         String port = "3306"; // por defecto es el puerto que utiliza
         String name = "root"; // usuario de la base de datos
-        String password = "Pilar*49"; // password de la base de datos
+        String password = "root"; // password de la base de datos
         String database = "vivero"; // nombre de la base de datos recien creada, en este caso vivero.
         // Esto especifica una zona horaria, no es obligatorio de utilizar, pero en
         // algunas zonas genera conflictos de conexión si no existiera
